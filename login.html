@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login - MC Addon Hub</title>
+
+    <link
+        rel="icon"
+        href="assets/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =================================
+         BACKGROUND
+    ================================== -->
+
+    <div class="login-background">
+
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+
+    </div>
+
+
+    <!-- =================================
+         LOGIN PAGE
+    ================================== -->
+
+    <main class="login-page">
+
+
+        <!-- BACK TO HOME -->
+
+        <a
+            href="index.html"
+            class="back-home"
+        >
+            ← Kembali ke Home
+        </a>
+
+
+        <!-- =================================
+             HAND LEFT
+        ================================== -->
+
+        <div class="hand hand-left">
+
+            <img
+                src="assets/hands/hand-left.png"
+                alt="Tangan kiri"
+            >
+
+        </div>
+
+
+        <!-- =================================
+             LOGIN BOARD
+        ================================== -->
+
+        <section class="login-board">
+
+
+            <!-- BOARD HEADER -->
+
+            <div class="board-header">
+
+                <div class="board-icon">
+                    🎮
+                </div>
+
+                <div>
+
+                    <p class="board-label">
+                        MC ADDON HUB
+                    </p>
+
+                    <h1>
+                        Login
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+
+            <form
+                id="loginForm"
+                class="login-form"
+            >
+
+
+                <!-- USERNAME -->
+
+                <div class="input-group">
+
+                    <label for="username">
+                        Username / Email
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Masukkan username atau email"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Masukkan password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                            aria-label="Tampilkan password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OPTIONS -->
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <span>
+                            Ingat saya
+                        </span>
+
+                    </label>
+
+
+                    <a
+                        href="#"
+                        class="forgot-password"
+                    >
+                        Lupa password?
+                    </a>
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+
+                    <span>
+                        Login
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+            <!-- REGISTER -->
+
+            <div class="register-area">
+
+                <span>
+                    Belum punya akun?
+                </span>
+
+                <a href="register.html">
+                    Daftar sekarang
+                </a>
+
+            </div>
+
+
+            <!-- DIVIDER -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>
+                    atau
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- GUEST -->
+
+            <a
+                href="index.html"
+                class="guest-button"
+            >
+                Lanjut sebagai pengunjung
+            </a>
+
+
+        </section>
+
+
+        <!-- =================================
+             HAND RIGHT
+        ================================== -->
+
+        <div class="hand hand-right">
+
+            <img
+                src="assets/hands/hand-right.png"
+                alt="Tangan kanan"
+            >
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

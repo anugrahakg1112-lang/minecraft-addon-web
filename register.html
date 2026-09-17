@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Daftar - MC Addon Hub</title>
+
+    <link
+        rel="icon"
+        href="assets/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =================================
+         BACKGROUND
+    ================================== -->
+
+    <div class="login-background">
+
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+
+    </div>
+
+
+    <!-- =================================
+         REGISTER PAGE
+    ================================== -->
+
+    <main class="login-page">
+
+
+        <!-- BACK TO HOME -->
+
+        <a
+            href="index.html"
+            class="back-home"
+        >
+            ← Kembali ke Home
+        </a>
+
+
+        <!-- =================================
+             LEFT HAND
+        ================================== -->
+
+        <div class="hand hand-left">
+
+            <img
+                src="assets/hands/hand-left.png"
+                alt="Tangan kiri"
+            >
+
+        </div>
+
+
+        <!-- =================================
+             REGISTER BOARD
+        ================================== -->
+
+        <section class="login-board register-board">
+
+
+            <!-- HEADER -->
+
+            <div class="board-header">
+
+                <div class="board-icon">
+                    🧱
+                </div>
+
+                <div>
+
+                    <p class="board-label">
+                        MC ADDON HUB
+                    </p>
+
+                    <h1>
+                        Buat Akun
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- REGISTER FORM -->
+
+            <form
+                id="registerForm"
+                class="login-form"
+            >
+
+
+                <!-- USERNAME -->
+
+                <div class="input-group">
+
+                    <label for="registerUsername">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        name="username"
+                        placeholder="Buat username"
+                        autocomplete="username"
+                        minlength="3"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="registerEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="Masukkan email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            name="password"
+                            placeholder="Buat password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleRegisterPassword"
+                            class="toggle-password"
+                            aria-label="Tampilkan password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Konfirmasi Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Ulangi password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="toggle-password"
+                            aria-label="Tampilkan password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <span>
+                        Saya menyetujui aturan penggunaan
+                        MC Addon Hub.
+                    </span>
+
+                </label>
+
+
+                <!-- REGISTER BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="registerButton"
+                >
+
+                    <span>
+                        Buat Akun
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+
+            <div class="register-area">
+
+                <span>
+                    Sudah punya akun?
+                </span>
+
+                <a href="login.html">
+                    Login sekarang
+                </a>
+
+            </div>
+
+
+            <!-- GUEST -->
+
+            <a
+                href="index.html"
+                class="guest-button"
+            >
+                Lanjut sebagai pengunjung
+            </a>
+
+
+        </section>
+
+
+        <!-- =================================
+             RIGHT HAND
+        ================================== -->
+
+        <div class="hand hand-right">
+
+            <img
+                src="assets/hands/hand-right.png"
+                alt="Tangan kanan"
+            >
+
+        </div>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

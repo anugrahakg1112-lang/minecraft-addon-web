@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Upload - MC Addon Hub</title>
+
+    <link
+        rel="icon"
+        href="assets/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/upload.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="header">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <img
+                src="assets/logo.png"
+                alt="MC Addon Hub"
+            >
+
+            <span>
+                MC ADDON HUB
+            </span>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =================================
+         UPLOAD PAGE
+    ================================== -->
+
+    <main class="upload-page">
+
+
+        <!-- TITLE -->
+
+        <section class="upload-intro">
+
+            <p class="small-title">
+                SHARE YOUR CONTENT
+            </p>
+
+            <h1>
+                Upload Konten
+            </h1>
+
+            <p>
+                Bagikan karya Minecraft kamu
+                kepada komunitas.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             UPLOAD FORM
+        ================================== -->
+
+        <section class="upload-container">
+
+
+            <form
+                id="uploadForm"
+                class="upload-form"
+            >
+
+
+                <!-- =================================
+                     CONTENT TYPE
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="contentType">
+                        Jenis Konten
+                    </label>
+
+                    <select
+                        id="contentType"
+                        name="contentType"
+                        required
+                    >
+
+                        <option value="">
+                            Pilih jenis konten
+                        </option>
+
+                        <option value="addon">
+                            Addon
+                        </option>
+
+                        <option value="texture-pack">
+                            Texture Pack
+                        </option>
+
+                        <option value="skin">
+                            Skin
+                        </option>
+
+                        <option value="map">
+                            Map
+                        </option>
+
+                        <option value="mod">
+                            Mod
+                        </option>
+
+                        <option value="resource-pack">
+                            Resource Pack
+                        </option>
+
+                        <option value="animation">
+                            Animation
+                        </option>
+
+                        <option value="other">
+                            Lainnya
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =================================
+                     TITLE
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="contentTitle">
+                        Nama Konten
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contentTitle"
+                        name="title"
+                        placeholder="Contoh: RPG Warrior"
+                        maxlength="100"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- =================================
+                     DESCRIPTION
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Deskripsi
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="6"
+                        maxlength="2000"
+                        placeholder="Jelaskan konten Minecraft kamu..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- =================================
+                     MINECRAFT VERSION
+                ================================== -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="minecraftVersion">
+                            Versi Minecraft
+                        </label>
+
+                        <input
+                            type="text"
+                            id="minecraftVersion"
+                            name="minecraftVersion"
+                            placeholder="Contoh: 1.21.x"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contentVersion">
+                            Versi Konten
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contentVersion"
+                            name="contentVersion"
+                            placeholder="Contoh: 1.0.0"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     THUMBNAIL
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="thumbnail">
+                        Gambar / Thumbnail
+                    </label>
+
+                    <div
+                        class="file-box"
+                        id="thumbnailBox"
+                    >
+
+                        <input
+                            type="file"
+                            id="thumbnail"
+                            name="thumbnail"
+                            accept="image/png,image/jpeg,image/webp"
+                        >
+
+                        <div class="file-content">
+
+                            <div class="file-icon">
+                                🖼️
+                            </div>
+
+                            <strong>
+                                Pilih gambar
+                            </strong>
+
+                            <span>
+                                PNG, JPG atau WEBP
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     CONTENT FILE
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="contentFile">
+                        File Konten
+                    </label>
+
+                    <div
+                        class="file-box"
+                        id="contentFileBox"
+                    >
+
+                        <input
+                            type="file"
+                            id="contentFile"
+                            name="contentFile"
+                            accept=".mcaddon,.mcpack,.mcworld,.zip,.png"
+                            required
+                        >
+
+                        <div class="file-content">
+
+                            <div class="file-icon">
+                                📦
+                            </div>
+
+                            <strong>
+                                Pilih file
+                            </strong>
+
+                            <span>
+                                .mcaddon, .mcpack, .mcworld,
+                                .zip atau file yang sesuai
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     TAGS
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="tags">
+                        Tags
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tags"
+                        name="tags"
+                        placeholder="Contoh: RPG, Adventure, Survival"
+                        maxlength="200"
+                    >
+
+                    <small>
+                        Pisahkan tag menggunakan koma.
+                    </small>
+
+                </div>
+
+
+
+                <!-- =================================
+                     PUBLISH OPTION
+                ================================== -->
+
+                <div class="publish-options">
+
+                    <label class="checkbox-option">
+
+                        <input
+                            type="checkbox"
+                            id="publishImmediately"
+                            name="publishImmediately"
+                            checked
+                        >
+
+                        <span>
+                            Publikasikan setelah upload
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- =================================
+                     SUBMIT
+                ================================== -->
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                    id="uploadButton"
+                >
+
+                    <span>
+                        🚀 Upload & Publish
+                    </span>
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="uploadMessage"
+                    class="upload-message"
+                ></div>
+
+
+            </form>
+
+
+            <!-- =================================
+                 UPLOAD INFO
+            ================================== -->
+
+            <aside class="upload-info">
+
+                <div class="info-card">
+
+                    <h2>
+                        📋 Sebelum Upload
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Gunakan nama konten yang jelas.
+                        </li>
+
+                        <li>
+                            Berikan deskripsi yang lengkap.
+                        </li>
+
+                        <li>
+                            Pilih kategori yang sesuai.
+                        </li>
+
+                        <li>
+                            Pastikan file dapat digunakan
+                            di Minecraft Bedrock.
+                        </li>
+
+                        <li>
+                            Jangan upload karya orang lain
+                            tanpa izin.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h2>
+                        📦 Format
+                    </h2>
+
+                    <p>
+                        Addon dan pack dapat menggunakan
+                        format seperti:
+                    </p>
+
+                    <div class="format-list">
+
+                        <span>
+                            .mcaddon
+                        </span>
+
+                        <span>
+                            .mcpack
+                        </span>
+
+                        <span>
+                            .mcworld
+                        </span>
+
+                        <span>
+                            .zip
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 MC Addon Hub
+        </p>
+
+        <a href="index.html">
+            Kembali ke Home
+        </a>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/upload.js"></script>
+
+</body>
+
+</html>

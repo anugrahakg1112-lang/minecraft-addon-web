@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile - MC Addon Hub</title>
+
+    <link
+        rel="icon"
+        href="assets/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/profile.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="header">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <img
+                src="assets/logo.png"
+                alt="MC Addon Hub"
+            >
+
+            <span>
+                MC ADDON HUB
+            </span>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="upload.html">
+                Upload
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =================================
+         PROFILE PAGE
+    ================================== -->
+
+    <main class="profile-page">
+
+
+        <!-- =================================
+             PROFILE HEADER
+        ================================== -->
+
+        <section class="profile-header">
+
+
+            <div class="profile-avatar">
+
+                <img
+                    id="profileAvatar"
+                    src="assets/logo.png"
+                    alt="Profile"
+                >
+
+            </div>
+
+
+            <div class="profile-info">
+
+                <p class="profile-label">
+                    MINECRAFT CREATOR
+                </p>
+
+                <h1 id="profileUsername">
+                    Username
+                </h1>
+
+                <p
+                    id="profileBio"
+                    class="profile-bio"
+                >
+                    Minecraft creator di MC Addon Hub.
+                </p>
+
+                <div class="profile-actions">
+
+                    <a
+                        href="upload.html"
+                        class="upload-button"
+                    >
+                        + Upload
+                    </a>
+
+                    <button
+                        type="button"
+                        id="editProfileButton"
+                        class="edit-button"
+                    >
+                        Edit Profile
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             PROFILE STATS
+        ================================== -->
+
+        <section class="profile-stats">
+
+
+            <div class="stat-card">
+
+                <span
+                    id="contentCount"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Konten
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span
+                    id="downloadCount"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Download
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span
+                    id="likeCount"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Likes
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             PROFILE CONTENT
+        ================================== -->
+
+        <section class="profile-content">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="small-title">
+                        CREATOR CONTENT
+                    </p>
+
+                    <h2>
+                        Konten Saya
+                    </h2>
+
+                </div>
+
+
+                <select
+                    id="contentFilter"
+                    class="content-filter"
+                >
+
+                    <option value="all">
+                        Semua
+                    </option>
+
+                    <option value="addon">
+                        Addon
+                    </option>
+
+                    <option value="texture-pack">
+                        Texture Pack
+                    </option>
+
+                    <option value="skin">
+                        Skin
+                    </option>
+
+                    <option value="map">
+                        Map
+                    </option>
+
+                    <option value="mod">
+                        Mod
+                    </option>
+
+                    <option value="resource-pack">
+                        Resource Pack
+                    </option>
+
+                    <option value="animation">
+                        Animation
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- CONTENT LIST -->
+
+            <div
+                id="myContent"
+                class="content-grid"
+            >
+
+                <!--
+                    Konten user akan
+                    dimasukkan oleh JavaScript.
+                -->
+
+
+                <div
+                    id="emptyContent"
+                    class="empty-content"
+                >
+
+                    <div class="empty-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Belum ada konten
+                    </h3>
+
+                    <p>
+                        Kamu belum mengupload
+                        konten Minecraft.
+                    </p>
+
+                    <a href="upload.html">
+                        Upload Sekarang
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         EDIT PROFILE MODAL
+    ================================== -->
+
+    <div
+        id="profileModal"
+        class="modal"
+    >
+
+        <div class="modal-box">
+
+
+            <button
+                type="button"
+                id="closeModal"
+                class="close-modal"
+                aria-label="Tutup"
+            >
+                ×
+            </button>
+
+
+            <p class="small-title">
+                PROFILE
+            </p>
+
+            <h2>
+                Edit Profile
+            </h2>
+
+
+            <form id="profileForm">
+
+
+                <div class="form-group">
+
+                    <label for="profileName">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="profileName"
+                        name="username"
+                        maxlength="30"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="profileDescription">
+                        Bio
+                    </label>
+
+                    <textarea
+                        id="profileDescription"
+                        name="bio"
+                        rows="4"
+                        maxlength="200"
+                        placeholder="Ceritakan tentang kamu..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="profileImage">
+                        Foto Profile
+                    </label>
+
+                    <input
+                        type="file"
+                        id="profileImage"
+                        name="avatar"
+                        accept="image/png,image/jpeg,image/webp"
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="save-profile"
+                >
+                    Simpan Profile
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 MC Addon Hub
+        </p>
+
+        <a href="index.html">
+            Home
+        </a>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>
